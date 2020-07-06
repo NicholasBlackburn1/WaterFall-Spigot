@@ -8,22 +8,40 @@
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
-    id 'java-library'
+    id 'java'
+    id 'kr.entree.spigradle' version '1.2.4'
 }
 
+rgroup 'space.nicholasblackburn'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+        maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+   mavenCentral()
+   protocolLib()
+   jitpack() // For vault
 }
 
 dependencies {
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
+   compileOnly spigot('1.12.2') // Or spigot()
+   compileOnly protocolLib()
+   compileOnly 'me.clip:placeholderapi:2.10.6'
+   
+   testImplementation 'junit:junit:4.12'
+}
 
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:29.0-jre'
-
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.13'
+spigot {
+   authors = ['Me']
+   depends = ['ProtocolLib','PlaceholderAPI']
+   apiVersion = '1.12'
+   load = STARTUP
+   commands {
+      
+   }
+   permissions {
+   }
 }

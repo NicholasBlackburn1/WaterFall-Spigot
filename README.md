@@ -1,2 +1,2 @@
 # WaterFall
-### A Spigot Plugin For HackerCrafts Modded Servers
+### A Spigot Plugin For HackerCraft Modded Servers
