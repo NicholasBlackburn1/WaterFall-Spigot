@@ -23,3 +23,8 @@ expansions:
       low: '&c'
       medium: '&e'
     server_name: A Minecraft Server
+  player:
+    ping_color:
+      medium: '&e'
+      high: '&a'
+      low: '&c'
