@@ -1,0 +1,7 @@
+main: space.nicholasblackburn.waterspigot.Waterspigot
+name: WaterSpigot
+version: 1.0-SNAPSHOT
+authors: [Me]
+api-version: '1.14'
+load: STARTUP
+depend: [PlaceholderAPI]
