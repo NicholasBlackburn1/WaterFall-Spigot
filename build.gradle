@@ -36,7 +36,7 @@ dependencies {
 
 spigot {
    authors = ['Me']
-   depends = ['ProtocolLib','PlaceholderAPI']
+   depends = ['PlaceholderAPI']
    apiVersion = '1.14'
    load = STARTUP
    commands {

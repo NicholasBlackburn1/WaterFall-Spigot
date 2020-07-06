@@ -4,7 +4,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Waterspigot extends JavaPlugin implements Listener {
+import space.nicholasblackburn.waterspigot.Events.OnPlayerJoin;
+
+public class Waterspigot extends JavaPlugin {
 
     
     // Runs on Plugin ENabled / Server Starting 
@@ -18,7 +20,7 @@ public class Waterspigot extends JavaPlugin implements Listener {
              */
 
              
-            Bukkit.getPluginManager().registerEvents(this, this);
+            getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
         } else {
             throw new RuntimeException("Could not find PlaceholderAPI!! Plugin can not work without it!");
         }
